@@ -1,12 +1,15 @@
 <script>
 	import { authClient } from "$lib/auth-client.js";
+	import { getDomainName } from "$lib/domain.js";
+	import { page } from "$app/state";
 
 	const session = authClient.useSession();
+	const domainName = $derived(getDomainName(page.url.hostname));
 </script>
 
 <header>
 	<nav>
-		<a href="/" class="logo">Freelance.now</a>
+		<a href="/" class="logo">{domainName}</a>
 		<div class="nav-right">
 			{#if $session?.data}
 				<a href="/dashboard">Dashboard</a>

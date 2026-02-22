@@ -1,15 +1,17 @@
-<h1>Freelance.now</h1>
-<p>Find the right freelancer for your project.</p>
-<a href="/dashboard" class="cta">Find a freelancer now</a>
+<script>
+	import { getRole } from "$lib/domain.js";
+	import { page } from "$app/state";
+
+	const role = $derived(getRole(page.url.hostname));
+</script>
+
+<h1>Find the right {role} for your project.</h1>
+<a href="/dashboard" class="cta">Find a {role} now</a>
 
 <style>
 	h1 {
 		font-size: 2.5rem;
-		margin-bottom: 0.5rem;
-	}
-	p {
 		margin-bottom: 1.5rem;
-		color: light-dark(#555, #aaa);
 	}
 	.cta {
 		display: inline-block;
