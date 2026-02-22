@@ -20,6 +20,7 @@
 	}
 	:global(body) {
 		font-family: "Hanken Grotesk Variable", system-ui, -apple-system, sans-serif;
+		font-weight: 500;
 		color-scheme: light dark;
 	}
 	main {
@@ -31,6 +32,8 @@
 		color: inherit;
 	}
 	:global(h1) {
+		font-weight: 400;
+		text-wrap: balanced;
 		margin-bottom: 1rem;
 	}
 	:global(input), :global(textarea) {
