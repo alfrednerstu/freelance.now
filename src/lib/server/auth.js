@@ -8,6 +8,7 @@ export const auth = betterAuth({
 	secret: BETTER_AUTH_SECRET,
 	trustedOrigins: [
 		"http://localhost:5173",
+		"https://freelance-now.vercel.app",
 		"https://marketer.now",
 		"https://uxwriter.now",
 		"https://copywriter.now",
