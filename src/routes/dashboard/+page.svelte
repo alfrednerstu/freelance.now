@@ -21,11 +21,11 @@
 	a {
 		display: block;
 		padding: 0.75rem 1rem;
-		border: 1px solid #e5e5e5;
+		border: 1px solid light-dark(#e5e5e5, #333);
 		border-radius: 4px;
 		text-decoration: none;
 	}
 	a:hover {
-		background: #f5f5f5;
+		background: light-dark(#f5f5f5, #333);
 	}
 </style>

@@ -9,18 +9,18 @@
 	}
 	p {
 		margin-bottom: 1.5rem;
-		color: #555;
+		color: light-dark(#555, #aaa);
 	}
 	.cta {
 		display: inline-block;
-		background: #111;
-		color: #fff;
+		background: light-dark(#111, #eee);
+		color: light-dark(#fff, #111);
 		padding: 0.75rem 1.5rem;
 		border-radius: 4px;
 		text-decoration: none;
 		font-weight: 600;
 	}
 	.cta:hover {
-		background: #333;
+		background: light-dark(#333, #ccc);
 	}
 </style>
