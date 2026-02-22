@@ -25,7 +25,6 @@
 
 <style>
 	header {
-		border-bottom: 1px solid light-dark(#e5e5e5, #333);
 		padding: 1rem 2rem;
 	}
 	nav {
