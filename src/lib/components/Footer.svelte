@@ -1,5 +1,13 @@
+<script>
+	import { authClient } from "$lib/auth-client.js";
+
+	const session = authClient.useSession();
+</script>
+
 <footer>
-	<a href="/sign-up">Sign up as a freelancer</a>
+	{#if !$session?.data}
+		<a href="/sign-up">Sign up as a freelancer</a>
+	{/if}
 </footer>
 
 <style>
