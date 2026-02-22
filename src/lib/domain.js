@@ -25,6 +25,6 @@ export function getRole(hostname) {
 
 export function getDomainName(hostname) {
 	const domain = getDomain(hostname);
-	// Capitalize: "freelance.now" -> "Freelance.now", "choose.expert" -> "Choose.expert"
+	if (!(domain in domainRoles)) return "Freelance.now";
 	return domain.charAt(0).toUpperCase() + domain.slice(1);
 }
