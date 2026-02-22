@@ -15,7 +15,7 @@ a {
 }
 h1 {
 	font-weight: 400;
-	text-wrap: balanced;
+	text-wrap: balance;
 	margin-bottom: 1rem;
 }
 input, textarea {

@@ -5,7 +5,7 @@
 	const role = $derived(getRole(page.url.hostname));
 </script>
 
-<h1>Find the right {role} for your project.</h1>
+<h1>Find the right {role} for your project</h1>
 <a href="/dashboard" class="cta">Find a {role} now</a>
 
 <style>
