@@ -1,58 +1,33 @@
 <script>
-	import Header from './Header.svelte';
-	import './layout.css';
+	import Header from "$lib/components/Header.svelte";
+	import Footer from "$lib/components/Footer.svelte";
 
-	/** @type {{children: import('svelte').Snippet}} */
 	let { children } = $props();
 </script>
 
-<div class="app">
-	<Header />
-
-	<main>
-		{@render children()}
-	</main>
-
-	<footer>
-		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
-		</p>
-	</footer>
-</div>
+<Header />
+<main>
+	{@render children()}
+</main>
+<Footer />
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
+	:global(*, *::before, *::after) {
 		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
 	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
+	:global(body) {
+		font-family: system-ui, -apple-system, sans-serif;
+		color: #111;
+		background: #fff;
 	}
-
-	footer a {
-		font-weight: bold;
+	main {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 2rem;
 	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
+	:global(a) {
+		color: #111;
 	}
 </style>
