@@ -9,9 +9,6 @@
 <a href="/dashboard" class="cta">Find a {role} now</a>
 
 <style>
-	h1 {
-		margin-top: 0;
-	}
 	.cta {
 		display: inline-block;
 		background: light-dark(#111, #eee);
