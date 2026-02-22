@@ -1,0 +1,51 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Hanken Grotesk Variable", system-ui, -apple-system, sans-serif;
+	font-weight: 500;
+	color-scheme: light dark;
+}
+a {
+	color: inherit;
+}
+h1 {
+	font-weight: 400;
+	text-wrap: balanced;
+	margin-bottom: 1rem;
+}
+input, textarea {
+	padding: 0.5rem;
+	border: 1px solid light-dark(#ccc, #555);
+	border-radius: 4px;
+	font: inherit;
+	background: inherit;
+	color: inherit;
+}
+button {
+	padding: 0.6rem;
+	background: light-dark(#111, #eee);
+	color: light-dark(#fff, #111);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 600;
+}
+button:hover {
+	background: light-dark(#333, #ccc);
+}
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-width: 400px;
+}
+label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	font-weight: 500;
+}
