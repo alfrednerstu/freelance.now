@@ -1,4 +1,5 @@
 <script>
+	import "@fontsource-variable/hanken-grotesk";
 	import Header from "$lib/components/Header.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 
@@ -18,7 +19,7 @@
 		padding: 0;
 	}
 	:global(body) {
-		font-family: system-ui, -apple-system, sans-serif;
+		font-family: "Hanken Grotesk Variable", system-ui, -apple-system, sans-serif;
 		color: #111;
 		background: #fff;
 	}
