@@ -10,8 +10,7 @@
 
 <style>
 	h1 {
-		font-size: 2.5rem;
-		margin-bottom: 1.5rem;
+		margin-top: 0;
 	}
 	.cta {
 		display: inline-block;
