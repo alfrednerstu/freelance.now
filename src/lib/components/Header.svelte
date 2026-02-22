@@ -1,12 +1,15 @@
 <script>
 	import { authClient } from "$lib/auth-client.js";
+	import { getDomainName } from "$lib/domain.js";
+	import { page } from "$app/state";
 
 	const session = authClient.useSession();
+	const domainName = $derived(getDomainName(page.url.hostname));
 </script>
 
 <header>
 	<nav>
-		<a href="/" class="logo">Freelance.now</a>
+		<a href="/" class="logo">{domainName}</a>
 		<div class="nav-right">
 			{#if $session?.data}
 				<a href="/dashboard">Dashboard</a>
@@ -22,7 +25,7 @@
 
 <style>
 	header {
-		border-bottom: 1px solid #e5e5e5;
+		border-bottom: 1px solid light-dark(#e5e5e5, #333);
 		padding: 1rem 2rem;
 	}
 	nav {
@@ -36,7 +39,7 @@
 		font-weight: 700;
 		font-size: 1.25rem;
 		text-decoration: none;
-		color: #111;
+		color: inherit;
 	}
 	.nav-right {
 		display: flex;
@@ -44,7 +47,7 @@
 		gap: 1rem;
 	}
 	a {
-		color: #111;
+		color: inherit;
 		text-decoration: none;
 	}
 	a:hover {
@@ -52,13 +55,14 @@
 	}
 	button {
 		background: none;
-		border: 1px solid #ccc;
+		border: 1px solid light-dark(#ccc, #555);
 		padding: 0.4rem 0.8rem;
 		border-radius: 4px;
 		cursor: pointer;
 		font: inherit;
+		color: inherit;
 	}
 	button:hover {
-		background: #f5f5f5;
+		background: light-dark(#f5f5f5, #333);
 	}
 </style>

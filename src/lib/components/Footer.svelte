@@ -1,14 +1,25 @@
+<script>
+	import { authClient } from "$lib/auth-client.js";
+	import { getRole } from "$lib/domain.js";
+	import { page } from "$app/state";
+
+	const session = authClient.useSession();
+	const role = $derived(getRole(page.url.hostname));
+</script>
+
 <footer>
-	<a href="/sign-up">Sign up as a freelancer</a>
+	{#if !$session?.data}
+		<a href="/sign-up">Sign up as a {role}</a>
+	{/if}
 </footer>
 
 <style>
 	footer {
-		border-top: 1px solid #e5e5e5;
+		border-top: 1px solid light-dark(#e5e5e5, #333);
 		padding: 1rem 2rem;
 		text-align: center;
 	}
 	a {
-		color: #111;
+		color: inherit;
 	}
 </style>

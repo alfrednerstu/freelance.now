@@ -29,13 +29,13 @@
 		display: inline-block;
 		margin-bottom: 1.5rem;
 		padding: 0.5rem 1rem;
-		background: #111;
-		color: #fff;
+		background: light-dark(#111, #eee);
+		color: light-dark(#fff, #111);
 		text-decoration: none;
 		border-radius: 4px;
 		font-weight: 600;
 	}
-	.add-btn:hover { background: #333; }
+	.add-btn:hover { background: light-dark(#333, #ccc); }
 	ul {
 		list-style: none;
 		display: flex;
@@ -45,14 +45,14 @@
 	li a {
 		display: block;
 		padding: 0.75rem 1rem;
-		border: 1px solid #e5e5e5;
+		border: 1px solid light-dark(#e5e5e5, #333);
 		border-radius: 4px;
 		text-decoration: none;
 	}
-	li a:hover { background: #f5f5f5; }
+	li a:hover { background: light-dark(#f5f5f5, #333); }
 	span {
 		display: block;
-		color: #555;
+		color: light-dark(#555, #aaa);
 		font-size: 0.9rem;
 		margin-top: 0.25rem;
 	}
