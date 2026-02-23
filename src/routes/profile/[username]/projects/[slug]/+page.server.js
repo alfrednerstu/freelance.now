@@ -26,6 +26,7 @@ export async function load({ params }) {
 
 	return {
 		username: params.username,
+		profileName: profile.name,
 		project: {
 			title: proj.title,
 			slug: proj.slug,

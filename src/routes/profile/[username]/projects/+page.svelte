@@ -18,6 +18,7 @@
 						<span>{proj.description}</span>
 					{/if}
 				</a>
+				<a href="/profile/{data.username}/projects/{proj.slug}/edit" class="edit-link">Edit</a>
 			</li>
 		{/each}
 	</ul>
@@ -42,14 +43,29 @@
 		flex-direction: column;
 		gap: 0.75rem;
 	}
-	li a {
+	li {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+	li a:first-child {
+		flex: 1;
 		display: block;
 		padding: 0.75rem 1rem;
 		border: 1px solid light-dark(#e5e5e5, #333);
 		border-radius: 4px;
 		text-decoration: none;
 	}
-	li a:hover { background: light-dark(#f5f5f5, #333); }
+	li a:first-child:hover { background: light-dark(#f5f5f5, #333); }
+	.edit-link {
+		padding: 0.5rem 0.75rem;
+		border: 1px solid light-dark(#ccc, #555);
+		border-radius: 4px;
+		text-decoration: none;
+		font-size: 0.85rem;
+		white-space: nowrap;
+	}
+	.edit-link:hover { background: light-dark(#f5f5f5, #333); }
 	span {
 		display: block;
 		color: light-dark(#555, #aaa);
